@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <TextView
+        style="@style/TitleStyle"
+        android:text="手机卡绑定" />
+
+    <TextView
+        style="@style/TextView"
+        android:text="通过绑定sim卡:\n下次重启手机如果发现sim卡变化,就会发送报警短信" />
+
+    <com.example.mobile360.view.SettingItemView
+        xmlns:mobile360="http://schemas.android.com/apk/res/com.example.mobile360"
+        android:id="@+id/siv_sim_bound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        mobile360:desoff="sim卡未绑定"
+        mobile360:deson="sim卡已绑定"
+        mobile360:destitle="点击绑定sim卡" >
+    </com.example.mobile360.view.SettingItemView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_online" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:drawable/presence_invisible" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/bind" />
+
+        <Button style="@style/NextBtn" />
+
+        <Button style="@style/PreBtn" />
+    </RelativeLayout>
+
+</LinearLayout>
